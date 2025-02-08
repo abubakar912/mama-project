@@ -173,6 +173,9 @@
 
 .main .text button:hover{
     transform: scale(1.1);
+    -webkit-box-shadow: 0px -1px 22px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -1px 22px 1px rgba(0,0,0,0.75);
+box-shadow: 0px -1px 22px 1px #FF9D23;
 }
 
 .open-menu, .close-menu{
@@ -191,6 +194,7 @@
 #check{
     display: none;
 }
+
 
 @media screen and (max-width:480px){
     .main {
@@ -241,7 +245,7 @@
     }
     .main .links h1{
         margin-left: 10px;
-        font-size: 25px;
+        font-size: 23px;
         color: white;
         font-family: "Ubuntu", serif;
     }
@@ -251,7 +255,7 @@
         position: absolute;
         top: 70px;
         right: 200px;
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .main .text h1{
@@ -272,7 +276,7 @@
         cursor: pointer;
         border-radius: 20px;
         border: none;
-        font-size: 16px
+        font-size: 14px;
     }
 
 }
@@ -340,6 +344,47 @@
     }
 
     .main .text h1{
+        font-size: 35px;
+    }
+
+    .main .text p{
+        padding-top: 10px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+    }
+
+    .main .text button{
+        margin-top: 30px;
+        margin-left: 15px;
+        padding: 20px 30px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: none;
+        font-size: 16px
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+
+
+    .main .links h1{
+        margin-left: 10px;
+        font-size: 25px;
+        color: white;
+        font-family: "Ubuntu", serif;
+    }
+
+
+    .main .text i{
+        position: absolute;
+        top: 125px;
+        right: 210px;
+        font-size: 35px;
+    }
+
+    .main .text h1{
         font-size: 40px;
     }
 
@@ -362,3 +407,134 @@
 
 }
 
+
+.second-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.second-page .image img{
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.second-page .image{
+    width: 50%;
+    height: 100%;
+}
+
+.second-page .text{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+
+.second-page .text h2{
+    font-family: "Ubuntu",serif;
+    margin-top: 90px;
+    font-size: 40px;
+}
+
+
+.second-page .text h2 span{
+    color: #FF9D23;
+}
+
+.second-page .text p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+@media screen and (max-width:480px){
+    .second-page{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly;
+        align-items: center; */
+    }
+
+    .second-page .image img{
+        position: relative;
+        top: 0;
+        width: 450px;
+        height: 300px;
+        border-radius: 10px;
+        margin-left: 20px;
+        margin-top: 100px;
+        cursor: pointer;
+    }
+
+    .second-page .image{
+        width: 100%;
+        height: 400px;
+    }
+    
+
+    .second-page .text{
+        width: 100%;
+        height: 100px;
+    }
+
+    .second-page .text h2{
+        text-align: center;
+        font-size: 38px;
+    }
+    
+
+
+
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .second-page{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly;
+        align-items: center; */
+    }
+
+    .second-page .image img{
+        position: relative;
+        top: 0;
+        width: 600px;
+        height: 350px;
+        border-radius: 10px;
+        margin-left: 50px;
+        margin-top: 100px;
+        cursor: pointer;
+    }
+
+    .second-page .image{
+        width: 100%;
+        height: 400px;
+        /* overflow: hidden; */
+    }
+    
+
+    .second-page .text{
+        width: 100%;
+        height: 100px;
+    }
+
+    .second-page .text h2{
+        text-align: center;
+        font-size: 38px;
+    }
+    .second-page .text p{
+        text-align: center;
+        font-size: 19px;
+    }
+    
+
+}
