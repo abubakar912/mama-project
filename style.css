@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Liter&family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./images/38e03324-10c9-437d-9192-73b5789b7130.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main .links{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    -webkit-box-shadow: 2px 0px 9px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 0px 9px -3px rgba(0,0,0,0.75);
+    box-shadow: 2px 0px 9px -3px #FF9D23;
+    z-index: 1;
+}
+
+.main .links h1{
+    margin-left: 50px;
+    font-size: 37px;
+    color: white;
+    font-family: "Ubuntu", serif;
+}
+
+.main .links h1 span{
+    color: #FF9D23;
+}
+
+.main .links .menu{
+    display: flex;
+    position: absolute;
+    right: 50px;
+    gap: 50px;
+    list-style-type: none;
+    z-index: 12;
+}
+
+.main .links .menu li{
+    font-size: 19px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main .links .menu li::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    height: 3px;
+    background-color: #FF9D23;
+    transition: 0.5s ease;
+}
+
+.main .links .menu li:hover::before{
+    width: 60px;
+}
+
+
+.main .links .menu li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.main .text{
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.main .text i{
+    position: absolute;
+    top: 135px;
+    right: 360px;
+    font-size: 30px;
+    color: #FF9D23;
+    animation-name: drop;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transition: 1s ease;
+}
+
+@keyframes drop {
+    0%{
+        color: #FF9D23;
+    }
+    50%{
+        color: white;
+    }
+}
+
+.main .text h1{
+    position: relative;
+    padding-top: 120px;
+    font-size: 50px;
+    color: white;
+    font-family: "Ubuntu",serif;
+}
+
+.main .text h1 span{
+    color: #FF9D23;
+}
+
+.main .text p{
+    padding-top: 10px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.main .text .if{
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+.main .text button{
+    margin-top: 50px;
+    margin-left: 15px;
+    padding: 20px 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+    color: black;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.main .text button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #FF9D23;
+    opacity: 0.5;
+    transition: 0.6s ease;
+}
+
+.main .text button:hover::before{
+    width: 100%;
+    color: white;
+}
+
+.main .text button:hover{
+    transform: scale(1.1);
+}
+
+.open-menu, .close-menu{
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+    color: white;
+}
+
+.open-menu{
+    right: 30px;
+}
+
+
+#check{
+    display: none;
+}
+
+@media screen and (max-width:480px){
+    .main {
+        position: relative;
+        z-index: 1;
+    }
+
+    .main .text {
+        position: relative;
+        z-index: -1 !important; 
+    }
+
+    .main::before {
+        z-index: -2 !important;
+    }
+
+    .main .links .menu{
+        z-index: 1000 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: #FF9D23;
+        transition: all 0.2s ease;
+    }
+
+    .close-menu{
+        position: absolute;
+        top: 40px;
+        right: 50px;
+    }
+    .open-menu{
+        display: block;
+    }
+
+    .close-menu{
+        display: block;
+        z-index: 101;
+    }
+
+    #check:checked~ .menu{
+        right: 0;
+    }
+    .main .links h1{
+        margin-left: 10px;
+        font-size: 25px;
+        color: white;
+        font-family: "Ubuntu", serif;
+    }
+
+
+    .main .text i{
+        position: absolute;
+        top: 70px;
+        right: 200px;
+        font-size: 35px;
+    }
+
+    .main .text h1{
+        font-size: 40px;
+    }
+
+    .main .text p{
+        padding-top: 10px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+    }
+
+    .main .text button{
+        margin-top: 30px;
+        margin-left: 15px;
+        padding: 20px 30px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: none;
+        font-size: 16px
+    }
+
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .main {
+        position: relative;
+        z-index: 1;
+    }
+
+    .main .text {
+        position: relative;
+        z-index: -1 !important; 
+    }
+
+    .main::before {
+        z-index: -2 !important;
+    }
+
+    .main .links .menu{
+        z-index: 1000 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: #FF9D23;
+        transition: all 0.2s ease;
+    }
+
+    .close-menu{
+        position: absolute;
+        top: 40px;
+        right: 50px;
+    }
+    .open-menu{
+        display: block;
+    }
+
+    .close-menu{
+        display: block;
+        z-index: 101;
+    }
+
+    #check:checked~ .menu{
+        right: 0;
+    }
+    .main .links h1{
+        margin-left: 10px;
+        font-size: 25px;
+        color: white;
+        font-family: "Ubuntu", serif;
+    }
+
+
+    .main .text i{
+        position: absolute;
+        top: 70px;
+        right: 350px;
+        font-size: 35px;
+    }
+
+    .main .text h1{
+        font-size: 40px;
+    }
+
+    .main .text p{
+        padding-top: 10px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 16px;
+    }
+
+    .main .text button{
+        margin-top: 30px;
+        margin-left: 15px;
+        padding: 20px 30px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: none;
+        font-size: 16px
+    }
+
+}
+
